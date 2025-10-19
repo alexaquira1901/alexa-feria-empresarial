@@ -2,10 +2,89 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Feria Empresarial 2025 - Alexandra Quira</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Feria Empresarial 2025 — I.E. Manuel María Mosquera</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bienvenida a la Feria Empresarial 2025</h1>
-  <p>Página creada por <strong>Alexandra Quira</strong></p>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="3" width="22" height="18" rx="4"
+            fill="#062436" stroke="#06b6d4" stroke-width="0.8" />
+          <path d="M6 10h12M6 14h8"
+            stroke="#06b6d4" stroke-width="0.9" stroke-linecap="round" />
+        </svg>
+        <div>
+          <h1>Feria Empresarial 2025 — I.E. Manuel María Mosquera</h1>
+          <div class="muted">Banner · PDF · Video integrados</div>
+        </div>
+      </div>
+      <div class="muted">Generado: <strong id="fecha"></strong></div>
+    </header>
+
+    <main class="card">
+      <!-- Banner -->
+      <section style="margin-bottom:16px">
+        <div class="banner" id="banner" title="Haz clic para ampliar">
+          <img alt="Banner feria" src="83abb4c4-3317-4bf5-b11d-f1feb3d0d709.jpg">
+          <div class="meta">
+            <strong>Feria Empresarial 2025</strong><br>
+            <small class="muted">I.E. Manuel María Mosquera — Puracé</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contenido dividido en dos columnas -->
+      <div class="grid">
+        <!-- PDF -->
+        <section class="pdf-wrap card">
+          <h3>Documento PDF</h3>
+          <div class="pdf-toolbar">
+            <button class="btn" id="downloadPdf">Descargar PDF</button>
+            <button class="btn" id="openPdfModal">Abrir PDF</button>
+          </div>
+          <div class="pdf-frame">
+            <object data="Feria empresarial 2025.pdf" type="application/pdf">
+              <p>Tu navegador no puede mostrar PDFs en línea.</p>
+            </object>
+          </div>
+        </section>
+
+        <!-- Video -->
+        <aside class="video-card card">
+          <h3>Video Integrado (YouTube)</h3>
+          <div class="video-placeholder" id="videoPlaceholder">
+            <iframe id="ytplayer"
+              src="https://www.youtube.com/embed/iBbiAXW77kU?rel=0&modestbranding=1&enablejsapi=1"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen title="Video embebido"></iframe>
+          </div>
+          <div class="video-buttons">
+            <button class="btn" id="play">Reproducir</button>
+            <button class="btn" id="pause">Pausar</button>
+            <button class="btn" id="mute">Silenciar</button>
+            <button class="btn" id="enterTheater">Modo Teatro</button>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <small>© 2025 Institución Educativa Manuel María Mosquera — Puracé, Cauca</small>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Modal del banner -->
+  <div class="modal" id="modal">
+    <div class="inner card">
+      <button class="close-x" id="closeModal">✕</button>
+      <img src="83abb4c4-3317-4bf5-b11d-f1feb3d0d709.jpg">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
